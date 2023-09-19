@@ -1,0 +1,44 @@
+/* styles.css */
+
+/* Root GridPane style */
+.grid-pane {
+    -fx-background-color: #f2f2f2;
+}
+
+/* Title Label style */
+.label-title {
+    -fx-text-fill: #333;
+    -fx-font-size: 24px;
+}
+
+/* Form Label style */
+.label {
+    -fx-text-fill: #444;
+}
+
+/* Text fields style */
+.text-field {
+    -fx-pref-width: 200px;
+}
+
+/* Login Button style */
+.login-button {
+    -fx-background-color: #0073e6;
+    -fx-text-fill: white;
+    -fx-pref-width: 100px;
+}
+
+.login-button:hover {
+    -fx-background-color: #005bbf;
+}
+
+/* Create Account Button style */
+.create-account-button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-pref-width: 150px;
+}
+
+.create-account-button:hover {
+    -fx-background-color: #45a446;
+}

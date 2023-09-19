@@ -15,7 +15,11 @@ public class HelloApplication extends Application {
     public void start(Stage stage) throws IOException {
 
         loginUI LUI = new loginUI(primaryPane);
-        Scene scene = new Scene(primaryPane,390,750);
+
+
+
+        Scene scene = new Scene(primaryPane,600,600);
+        scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
         stage.setTitle("Hello!");
         stage.setScene(scene);
         stage.show();
