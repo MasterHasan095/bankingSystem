@@ -1,5 +1,6 @@
 package com.example.bankingsystem;
 
+import com.example.bankingsystem.loginAndSignUp.loginUI;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -13,7 +14,7 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
 
-        loginPage lPage = new loginPage(primaryPane);
+        loginUI LUI = new loginUI(primaryPane);
         Scene scene = new Scene(primaryPane,390,750);
         stage.setTitle("Hello!");
         stage.setScene(scene);
