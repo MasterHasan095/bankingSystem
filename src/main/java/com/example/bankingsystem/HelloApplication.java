@@ -1,5 +1,6 @@
 package com.example.bankingsystem;
 
+import com.example.bankingsystem.database.dbConnect;
 import com.example.bankingsystem.loginAndSignUp.loginUI;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -11,10 +12,12 @@ import java.io.IOException;
 
 public class HelloApplication extends Application {
     private AnchorPane primaryPane = new AnchorPane();
+    public static dbConnect database = new dbConnect();
     @Override
     public void start(Stage stage) throws IOException {
 
         loginUI LUI = new loginUI(primaryPane);
+        System.out.println(database);
 
 
 

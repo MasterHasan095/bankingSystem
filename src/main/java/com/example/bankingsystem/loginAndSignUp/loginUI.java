@@ -28,11 +28,7 @@ public class loginUI {
 
     public loginUI(AnchorPane primaryPane) {
         this.primaryPane = primaryPane;
-        passwordArea.getChildren().addAll(password,showHideButton);
-        showHideButton.setOnAction(e->{
-            togglePasswordVisibility();
-        });
-        VBox vbox = new VBox(userName_lbl, username, password_lbl, passwordArea, loginButton, createNewAccount, cNA_Button);
+        VBox vbox = new VBox(userName_lbl, username, password_lbl, password, loginButton, createNewAccount, cNA_Button);
         vbox.setSpacing(20);
         primaryPane.getChildren().addAll(vbox);
         AnchorPane.setLeftAnchor(vbox, 200.0);
@@ -52,9 +48,7 @@ public class loginUI {
     Label userName_lbl = new Label("UserName : ");
     TextField username = new TextField();
     Label password_lbl = new Label("Password : ");
-    HBox passwordArea = new HBox();
-    PasswordField password = new PasswordField();
-    Button showHideButton = new Button("Show");
+    TextField password = new PasswordField();
 
 
     Button loginButton = new Button("Log In");
@@ -62,15 +56,5 @@ public class loginUI {
     Label createNewAccount = new Label("       OR        ");
 
 
-    private void togglePasswordVisibility() {
-        if (passwordVisible) {
-            System.out.println(password.getText());
-            password.setText(password.getText());
-            showHideButton.setText("Hide");
-        } else {
-            password.setPromptText("Password");
-            showHideButton.setText("Show");
-        }
-        passwordVisible = !passwordVisible;
-    }
+
 }
